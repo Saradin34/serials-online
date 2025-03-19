@@ -1,0 +1,28 @@
+.anime-card {
+  background-color: #34495e;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 20px;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .anime-card-content {
+    display: flex;
+    gap: 15px;
+
+    img {
+      width: 100px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    p {
+      margin: 0;
+      flex: 1;
+    }
+  }
+}

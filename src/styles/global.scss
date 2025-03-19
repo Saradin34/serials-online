@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  min-height: calc(100vh - 120px);
+
+  .sidebar-left, .sidebar-right {
+    flex: 0 0 250px;
+  }
+
+  .main-content {
+    flex: 1;
+  }
+}

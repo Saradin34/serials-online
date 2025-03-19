@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  min-height: calc(100vh - 120px);
+}
+.app-container .sidebar-left, .app-container .sidebar-right {
+  flex: 0 0 250px;
+}
+.app-container .main-content {
+  flex: 1;
+}
+
+/*# sourceMappingURL=global.css.map */
