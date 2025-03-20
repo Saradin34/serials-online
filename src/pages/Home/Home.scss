@@ -1,0 +1,11 @@
+.home-container {
+  display: flex;
+
+  .sidebar-left, .sidebar-right {
+    flex: 0 0 10%;
+  }
+
+  .main-content {
+    flex: 1;
+  }
+}

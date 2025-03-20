@@ -1,39 +1,44 @@
 .anime-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .anime-card {
-  display: flex;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s;
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
 }
+
 .anime-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
+
 .anime-card .anime-card-image {
-  width: 150px;
-  height: 200px;
-  object-fit: cover;
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
 }
+
 .anime-card .anime-card-content {
-  padding: 20px;
-  flex: 1;
+    padding: 20px;
+    flex: 1;
 }
+
 .anime-card .anime-card-content h3 {
-  margin-top: 0;
-  color: #333;
+    margin-top: 0;
+    color: #333;
 }
+
 .anime-card .anime-card-content p {
-  margin: 5px 0;
-  color: #555;
+    margin: 5px 0;
+    color: #555;
 }
 
 /*# sourceMappingURL=AnimeCard.css.map */

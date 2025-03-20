@@ -1,24 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import Header from './components/Header/Header';
-import SidebarLeft from './components/SidebarLeft/SidebarLeft';
-import SidebarRight from './components/SidebarRight/SidebarRight';
-import MainContent from './components/MainContent/MainContent';
 import Footer from './components/Footer/Footer';
+import Home from './pages/Home/Home.tsx';
 import './styles/global.scss';
 
 function App() {
-  return (
-      <Router>
-        <Header />
-        <div className="app-container">
-          <SidebarLeft />
-          <MainContent />
-          <SidebarRight />
-        </div>
-        <Footer />
-      </Router>
-  );
+    return (
+        <Router>
+            <div className='wrapper'>
+                <Header/>
+                <Home/>
+                <Footer/>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
