@@ -18,3 +18,21 @@ body {
   display: block;
   margin: 8px;
 }
+
+::-webkit-scrollbar {
+  background: rgba(0, 0, 0, .2);
+  width: 10px;
+  border-radius: 15px;
+  padding-top: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1px solid #D1C299;
+  border-radius: 15px;
+}
+
+@media (max-width: 325px) {
+  body {
+    margin: 0;
+  }
+}
