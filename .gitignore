@@ -12,11 +12,19 @@ dist
 dist-ssr
 .local
 
+<<<<<<< HEAD
+# Ignoring firebase.ts
+firebase.ts
+
+# Editor directories and files
+.vscode/*
+=======
 #Ignoring firebase.ts
 firebase.ts
 
 #Editor directories and files
 .vscode/
+>>>>>>> b3ed4ae3333b2a8919189e208d9486f8143651da
 !.vscode/extensions.json
 .idea
 .DS_Store
