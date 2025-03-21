@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
-import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './AnimeCard.scss';
 
