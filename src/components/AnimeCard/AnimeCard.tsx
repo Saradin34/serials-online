@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './AnimeCard.scss';
 
@@ -147,6 +148,40 @@ const AnimeCard: React.FC = () => {
             </div>
             {loading && <div>Загрузка...</div>}
             {!hasMore && <div>Это все аниме!</div>}
+=======
+            <h1 className='anime-h1'>
+                Смотреть аниме и мультсериалы онлайн все серии и сезоны
+            </h1>
+            <div className="anime-list">
+                {animeList.map((anime) => (
+                    <div key={anime.id} className="anime-card">
+                        <div className="anime-card-title">
+                            <h3 className="anime-card-h1">{anime.russian}</h3>
+                        </div>
+                        <div className="anime-card-content">
+                            <img
+                                src={`https://shikimori.one${anime.image.original}`}
+                                alt={anime.russian}
+                                className="anime-card-image"
+                            />
+                            <div className="anime-card-text">
+                                <p>
+                                    <strong>Тип:</strong> {anime.kind}
+                                </p>
+                                <p>
+                                    <strong>Эпизоды:</strong> {anime.episodes} ({anime.episodes_aired} вышло)
+                                </p>
+                                <p>
+                                    <strong>Рейтинг:</strong> {anime.score}
+                                </p>
+                                <p>
+                                    <strong>Статус:</strong> {anime.status}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

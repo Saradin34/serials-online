@@ -1,0 +1,25 @@
+.home-container {
+  display: flex;
+
+  .main-content {
+    flex: 1;
+  }
+
+  @media (max-width: 767px) {
+    .sidebar-left, .sidebar-right {
+      padding: 10px;
+      width: 150px;
+    }
+
+    .sidebar-left {
+      .menu ul li a {
+        font-size: 12px;
+      }
+    }
+
+    .auth-button {
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+}
