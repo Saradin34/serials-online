@@ -6,6 +6,7 @@ const SidebarLeft: React.FC = () => {
     return (
         <aside className="sidebar-left">
             <nav className="menu">
+                <h3 className="menu-title">Меню</h3>
                 <ul>
                     <li><Link to="/">Главная</Link></li>
                     <li><Link to="/best">Лучшее</Link></li>

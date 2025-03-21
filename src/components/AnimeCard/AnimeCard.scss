@@ -1,13 +1,14 @@
 .anime-h1 {
   color: #2ECC71;
   font-size: 19pt;
-  margin: 10px 0 10px 0;
+  margin-bottom: 10px;
 }
 
 .anime-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 15px;
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -24,7 +25,7 @@
   border-radius: 20px 20px 0 0;
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, .9) inset, 0 0 8px rgba(0, 0, 0, .7);
 
-  .anime-card-h1 {
+  .anime-card-h2 {
     color: #72B4D1;
     font-size: 18pt;
     font-weight: normal;
@@ -78,7 +79,7 @@
     }
   }
   .anime-card-title {
-    .anime-card-h1 {
+    .anime-card-h2 {
       font-size: 20px;
     }
   }
@@ -101,7 +102,7 @@
     }
   }
   .anime-card-title {
-    .anime-card-h1 {
+    .anime-card-h2 {
       font-size: 14px;
       text-align: center;
     }

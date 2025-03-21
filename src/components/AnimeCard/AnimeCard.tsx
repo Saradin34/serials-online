@@ -59,7 +59,7 @@ const AnimeCard: React.FC = () => {
                 {animeList.map((anime) => (
                     <div key={anime.id} className="anime-card">
                         <div className="anime-card-title">
-                            <h3 className="anime-card-h1">{anime.russian}</h3>
+                            <h2 className="anime-card-h2">{anime.russian}</h2>
                         </div>
                         <div className="anime-card-content">
                             <img

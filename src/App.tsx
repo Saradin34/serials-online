@@ -8,9 +8,11 @@ function App() {
     return (
         <Router>
             <div className='wrapper'>
-                <Header/>
-                <Home/>
-                <Footer/>
+                <div className="app-container">
+                    <Header/>
+                    <Home/>
+                    <Footer/>
+                </div>
             </div>
         </Router>
     );
