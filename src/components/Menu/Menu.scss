@@ -1,0 +1,35 @@
+.menu {
+  font-size: 18px;
+  .menu-title {
+    font-weight: bold;
+    color: #f76b04;
+    text-align: center;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.5);
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      border-bottom: 2px solid rgba(128, 128, 128, 0.5);
+      border-radius: 20px 0;
+      cursor: pointer;
+
+      a {
+        display: block;
+        color: #72B4D1;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px 15px;
+
+        &:hover {
+          color: #1abc9c;
+        }
+      }
+
+      &:hover {
+        border-bottom: 2px solid #1abc9c;
+      }
+    }
+  }
+}

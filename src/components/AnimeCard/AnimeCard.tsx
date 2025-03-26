@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import axios from 'axios';
 import './AnimeCard.scss';
 
@@ -88,7 +88,7 @@ const AnimeCard: React.FC = () => {
                                 className="anime-card"
                             >
                                 <div className="anime-card-title">
-                                    <h3 className="anime-card-h1">{anime.russian}</h3>
+                                    <h2 className="anime-card-h2">{anime.russian}</h2>
                                 </div>
                                 <div className="anime-card-content">
                                     <img
@@ -109,6 +109,7 @@ const AnimeCard: React.FC = () => {
                                         <p>
                                             <strong>Статус:</strong> {anime.status}
                                         </p>
+
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +118,7 @@ const AnimeCard: React.FC = () => {
                         return (
                             <div key={anime.id} className="anime-card">
                                 <div className="anime-card-title">
-                                    <h3 className="anime-card-h1">{anime.russian}</h3>
+                                    <h2 className="anime-card-h2">{anime.russian}</h2>
                                 </div>
                                 <div className="anime-card-content">
                                     <img
@@ -138,6 +139,7 @@ const AnimeCard: React.FC = () => {
                                         <p>
                                             <strong>Статус:</strong> {anime.status}
                                         </p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, dignissimos dolorem in magni nulla officia recusandae repellendus reprehenderit veritatis voluptatum. Eaque harum, magni nobis provident quia quibusdam quod velit voluptatibus!</p>
                                     </div>
                                 </div>
                             </div>
