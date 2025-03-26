@@ -1,24 +1,9 @@
 .sidebar-left {
   width: 250px;
   background-color: black;
-  padding: 15px;
   color: white;
-}
-.sidebar-left .menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.sidebar-left .menu ul li {
-  margin-bottom: 10px;
-}
-.sidebar-left .menu ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
-.sidebar-left .menu ul li a:hover {
-  color: #1abc9c;
+  border-radius: 0 15px 15px 0;
+  min-height: 300px;
 }
 
 /*# sourceMappingURL=SidebarLeft.css.map */

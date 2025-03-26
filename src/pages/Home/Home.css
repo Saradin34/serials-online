@@ -1,21 +1,9 @@
 .home-container {
   display: flex;
+  align-items: flex-start;
 }
 .home-container .main-content {
   flex: 1;
-}
-@media (max-width: 767px) {
-  .home-container .sidebar-left, .home-container .sidebar-right {
-    padding: 10px;
-    width: 150px;
-  }
-  .home-container .sidebar-left .menu ul li a {
-    font-size: 12px;
-  }
-  .home-container .auth-button {
-    padding: 5px;
-    font-size: 12px;
-  }
 }
 
 /*# sourceMappingURL=Home.css.map */

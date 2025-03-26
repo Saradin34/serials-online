@@ -1,0 +1,82 @@
+.form-auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-auth h3 {
+  width: 90%;
+  padding: 5px;
+  text-align: center;
+  color: #f76b04;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.5);
+  margin-bottom: 15px;
+}
+.form-auth .form-input {
+  text-align: center;
+}
+.form-auth .form-input input {
+  padding: 5px 15px;
+  border: 2px solid #D1C299;
+  color: #D1C299;
+  width: 80%;
+  min-height: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  margin: 0;
+}
+.form-auth .form-input input:focus {
+  background-color: #D1C299;
+  outline: none;
+  color: black;
+}
+.form-auth .form-input #email {
+  border-radius: 15px 15px 0 0;
+}
+.form-auth .form-input #password {
+  border-radius: 0 0 15px 15px;
+  margin-top: -2px;
+}
+.form-auth .auth-btn {
+  width: 60%;
+  min-height: 40px;
+  margin-top: 10px;
+  padding: 0 5px;
+  font-size: 13px;
+  background-color: black;
+  color: #D1C299;
+  border: 2px solid #D1C299;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  transition-duration: 0.3s !important;
+}
+.form-auth .auth-btn:hover {
+  background-color: #D1C299;
+  color: black;
+}
+.form-auth .form-checkbox {
+  display: flex;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #D1C299;
+}
+.form-auth .form-checkbox #save-computer {
+  margin-left: 10px;
+}
+
+.flex-references {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.flex-references .flex-reference {
+  background: none;
+  border: none;
+  color: #72B4D1;
+  cursor: pointer;
+}
+.flex-references .flex-reference:hover {
+  color: #f76b04;
+}
+
+/*# sourceMappingURL=Auth.css.map */
