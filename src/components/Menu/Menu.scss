@@ -1,5 +1,7 @@
 .menu {
   font-size: 18px;
+  background-color: black;
+  border-radius: 0 15px 15px 0;
   .menu-title {
     font-weight: bold;
     color: #f76b04;
@@ -23,12 +25,12 @@
         padding: 10px 15px;
 
         &:hover {
-          color: #1abc9c;
+          color: #2ECC71;
         }
       }
 
       &:hover {
-        border-bottom: 2px solid #1abc9c;
+        border-bottom: 2px solid #2ECC71;
       }
     }
   }
