@@ -8,20 +8,31 @@ import {
 import './Auth.scss';
 
 const Auth: FC = () => {
+    const [username, setUsername] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
+    const [confirmPassword, setConfirmPassword] = useState<string>('');
     const [isLogin, setIsLogin] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
+    const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+    const [avatar, setAvatar] = useState<string>('');
 
     const handleAuth = async (e: FormEvent) => {
         e.preventDefault();
         setError(null);
+
+        if (!isLogin && password !== confirmPassword) {
+            setError('Пароли не совпадают');
+            return;
+        }
+
         try {
             if (isLogin) {
                 await signInWithEmailAndPassword(auth, email, password);
-                alert('Авторизация прошла успешно');
+                setIsAuthenticated(true);
             } else {
                 await createUserWithEmailAndPassword(auth, email, password);
+                setIsAuthenticated(true);
                 alert('Успешная регистрация');
             }
         } catch(error: any) {
@@ -43,18 +54,74 @@ const Auth: FC = () => {
         }
     }
 
+    const handleLogout = async () => {
+        try {
+            await auth.signOut();
+            setIsAuthenticated(false);
+            setEmail('');
+            setPassword('');
+            setUsername('');
+        } catch(error: any) {
+            setError(error.message);
+        }
+    }
+
+    const handleAvatarChange = (selectedAvatar: string) => {
+        setAvatar(selectedAvatar);
+    }
+
+    if (isAuthenticated) {
+        return (
+            <div className="profile-container">
+                <h3>Профиль</h3>
+                <div className="avatar-section">
+                    <div className="avatar-options">
+                        {['avatar1', 'avatar2', 'avatar3', 'avatar4'].map((av) => (
+                            <div
+                                key={av}
+                                className={`avatar-option ${avatar === av ? 'selected' : ''}`}
+                                onClick={() => handleAvatarChange(av)}
+                            >
+                                <img src={`/${av}.png`} alt={av} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="profile-actions">
+                    <button className="profile-btn message-btn">
+                        Сообщения
+                    </button>
+                    <button className="profile-btn logout-btn" onClick={handleLogout}>
+                        Выйти
+                    </button>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <>
             <form onSubmit={handleAuth} className="form-auth">
                 <h3>{isLogin ? 'Авторизация' : 'Регистрация'}</h3>
                 {error && <div style={{color: '#f76b04', marginBottom: '10px'}}>{error}</div>}
                 <div className="form-input">
+                    {!isLogin && (
+                        <input
+                            onChange={(e) => setUsername(e.target.value)}
+                            type="text"
+                            id="username"
+                            value={username}
+                            placeholder="Логин:"
+                            className="auth-input"
+                        />
+                    )}
                     <input
                         onChange={(e) => setEmail(e.target.value)}
                         type="email"
                         id="email"
                         value={email}
                         placeholder="Почта:"
+                        className="auth-input"
                     />
                     <input
                         onChange={(e) => setPassword(e.target.value)}
@@ -62,7 +129,18 @@ const Auth: FC = () => {
                         id="password"
                         value={password}
                         placeholder="Пароль:"
+                        className="auth-input"
                     />
+                    {!isLogin && (
+                        <input
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            type="password"
+                            id="confirmPassword"
+                            value={confirmPassword}
+                            placeholder="Повторите пароль:"
+                            className="auth-input"
+                        />
+                    )}
                 </div>
                 <button type='submit' className="auth-btn">
                     {isLogin ? 'Войти' : 'Зарегистрироваться'}
