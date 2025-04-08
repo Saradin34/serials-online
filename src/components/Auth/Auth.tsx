@@ -121,7 +121,7 @@ const Auth: FC = () => {
                         id="email"
                         value={email}
                         placeholder="Почта:"
-                        className="auth-input"
+                        className={`auth-input ${!isLogin ? "auth-email" : ""}`}
                     />
                     <input
                         onChange={(e) => setPassword(e.target.value)}
@@ -129,7 +129,7 @@ const Auth: FC = () => {
                         id="password"
                         value={password}
                         placeholder="Пароль:"
-                        className="auth-input"
+                        className={`auth-input ${!isLogin ? "auth-password" : ""}`}
                     />
                     {!isLogin && (
                         <input
