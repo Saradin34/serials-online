@@ -1,0 +1,44 @@
+.anime-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.anime-title {
+  color: #2ECC71;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.anime-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loading-indicator,
+.end-message,
+.error-message {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-size: 18px;
+}
+
+.error-message {
+  color: #ff6b6b;
+}
+
+@media (max-width: 1024px) {
+  .anime-title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .anime-title {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=AnimeList.css.map */

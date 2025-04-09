@@ -1,5 +1,6 @@
 import React from 'react';
 import AnimeCard from '../AnimeCard/AnimeCard';
+import AnimeList from '../AnimeCard/AnimeList.tsx';
 import './MainContent.scss';
 
 const MainContent: React.FC = () => {
@@ -19,7 +20,7 @@ const MainContent: React.FC = () => {
     return (
         <div className="main-content">
             {animeList.map((anime, index) => (
-                <AnimeCard key={index} {...anime} />
+                <AnimeList key={index} {...anime} />
             ))}
         </div>
     );
