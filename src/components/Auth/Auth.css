@@ -26,7 +26,7 @@
 .form-auth .form-input {
   text-align: center;
 }
-.form-auth .form-input input {
+.form-auth .form-input .auth-input {
   padding: 5px 15px;
   border: 2px solid #D1C299;
   color: #D1C299;
@@ -35,7 +35,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
 }
-.form-auth .form-input input:focus {
+.form-auth .form-input .auth-input:focus {
   background-color: #D1C299;
   outline: none;
   color: black;
@@ -43,6 +43,7 @@
 }
 .form-auth .form-input #username {
   border-radius: 15px 15px 0 0;
+  margin-bottom: 0;
 }
 .form-auth .form-input #email {
   border-radius: 15px 15px 0 0;
@@ -55,6 +56,13 @@
 .form-auth .form-input #confirmPassword {
   border-radius: 0 0 15px 15px;
   margin-top: -2px;
+}
+.form-auth .form-input .auth-email {
+  margin-bottom: 15px;
+  border-radius: 0 0 15px 15px !important;
+}
+.form-auth .form-input .auth-password {
+  border-radius: 15px 15px 0 0 !important;
 }
 .form-auth .auth-btn {
   width: 60%;
@@ -73,7 +81,9 @@
   color: black;
 }
 .form-auth .form-checkbox {
+  width: 90%;
   display: flex;
+  justify-content: space-evenly;
   margin-top: 10px;
   font-size: 14px;
   color: #D1C299;

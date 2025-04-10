@@ -28,7 +28,7 @@
   .form-input {
     text-align: center;
 
-    input {
+    .auth-input {
       padding: 5px 15px;
       border: 2px solid #D1C299;
       color: #D1C299;
@@ -47,6 +47,7 @@
 
     #username {
       border-radius: 15px 15px 0 0;
+      margin-bottom: 0;
     }
 
     #email {
@@ -57,13 +58,25 @@
     #password {
       border-radius: 0 0 15px 15px;
       margin-top: -2px;
+
     }
 
     #confirmPassword{
       border-radius: 0 0 15px 15px;
       margin-top: -2px;
     }
+
+    .auth-email {
+      margin-bottom: 15px;
+      border-radius: 0 0 15px 15px !important;
+    }
+
+    .auth-password {
+      border-radius: 15px 15px 0 0 !important;
+    }
   }
+
+
 
   .auth-btn {
     width: 60%;
@@ -85,7 +98,9 @@
   }
 
   .form-checkbox {
+    width: 90%;
     display: flex;
+    justify-content: space-evenly;
     margin-top: 10px;
     font-size: 14px;
     color: #D1C299;
